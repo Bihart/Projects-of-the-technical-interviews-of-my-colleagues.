@@ -1,0 +1,12 @@
+* About this solution.
+
+** Technologies
++ HTML5
++ ECMAscript (javascript in firefox)
++ CSS
+
+** TODOS (?) or complications
+
+There is no error maanagement (notifications) for the end user,
+although if the task is problematic it is not performed, but the end
+user does not know about it.
