@@ -39,8 +39,9 @@ h2 {
   border: solid 2px purple;
 }
 
-.manager-form {
+.input-form {
   border-radius: 1em;
   border: solid 2px purple;
-  padding: 2em;
+  padding: 1em;
+  margin: 0.5em;
 }

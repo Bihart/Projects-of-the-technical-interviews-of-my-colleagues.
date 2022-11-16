@@ -13,28 +13,31 @@ form.addEventListener('formdata', handleData);
 
 function handleData(event) {
     const formData = event.formData;
+    const action = formData.get('verb');
     const target = formData.get('type-theater');
     const seatingStr = formData.get('seating');
     const seating = parseInt(seatingStr);
-    updateTheater(target, seating);
+    updateTheater(target, seating, action);
 }
 
 const CENTRAL_PRICE = 8;
 const SECUNDARY_PRICE = 6;
 const MAX_SEATING_CENTRAL = 500;
 const MAX_SEATING_SECU = 80;
-function updateTheater(target, noSeating) {
+function updateTheater(target, noSeating, verb) {
     const dip = document.getElementById(`${target}-dis`);
     const ocp = document.getElementById(`${target}-ocp`);
     const total = document.getElementById(`${target}-total`);
 
+    noSeating = verb === "send" ? noSeating : (noSeating * -1);
     const posDip = parseInt(dip.innerText) - noSeating;
     const posOcp = parseInt(ocp.innerText) + noSeating;
-    const newDip = Math.max(0 , posDip);
     const capOfOcp = target === "central"
-        ? MAX_SEATING_CENTRAL
-        : MAX_SEATING_SECU;
-    const newOcp = Math.min(capOfOcp, posOcp);
+          ? MAX_SEATING_CENTRAL
+          : MAX_SEATING_SECU;
+
+    const newDip = Math.min(capOfOcp, Math.max(0 , posDip));
+    const newOcp = Math.max(0, Math.min(capOfOcp, posOcp));
     const localPrice =
         target === "central"
           ? CENTRAL_PRICE

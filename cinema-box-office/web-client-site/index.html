@@ -13,16 +13,21 @@
     <h2><span>CINE</span>MAGICO</h2>
     <main>
         <h3> Cinema Box office </h3>
-        <article class="manager-form">
+        <article class="input-form">
             <form>
-            <label name="seating"> Personas que van a entrar </label>
-            <input type="number" name="seating" min="0" step="1" value="0">
-            <label name="type-theater"> a la </label>
-            <select name="type-theater">
-                <option value="central">Sala central</option>
-                <option value="secundary">Sala secundaría</option>
-            </select>
-            <button id="main-button">Registrar entrada</button>
+                <label name="verb"> Voy a </label>
+                <select name="verb">
+                    <option value="send">Vender</option>
+                    <option value="cancel">Cancelar</option>
+                </select>
+                <input type="number" name="seating" min="0" step="1" value="0">
+                <label name="seating"> boletas </label>
+                <label name="type-theater"> de la </label>
+                <select name="type-theater">
+                    <option value="central">Sala central</option>
+                    <option value="secundary">Sala secundaría</option>
+                </select>
+                <button id="main-button">Registrar acción</button>
             </form>
         </article>
         <article class="cards">
