@@ -1,0 +1,15 @@
+** The Goal
+
+The goal is to create a program (understood in a broad sense) to manager
+a ciname, with two theater:
+
++ Central Theater:
+  Number of seats: 500.
+  Price per seat: 8 USD.
+
++ Secundary Theater:
+  Number of seats: 80.
+  Price per seat: 6 USD.
+
+You should be able to separate and cancel tickets depending on the
+condition of the theater.
