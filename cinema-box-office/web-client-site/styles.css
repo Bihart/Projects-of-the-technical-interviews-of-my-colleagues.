@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100wh;
+}
+
+h2 {
+  color: blueviolet;
+  justify-content: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.card {
+  border-radius: 1em;
+  border: solid 2px red;
+  margin: 1em;
+  padding: 2em;
+}
+
+.dis {
+  color: green;
+}
+
+.ocp {
+  color: red;
+}
+
+.total {
+  border-radius: 1em;
+  border: solid 2px purple;
+}
+
+.manager-form {
+  border-radius: 1em;
+  border: solid 2px purple;
+  padding: 2em;
+}

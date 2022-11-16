@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CINEMAGICO</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="index.js"></script>
+</head>
+
+<body>
+    <h2><span>CINE</span>MAGICO</h2>
+    <main>
+        <h3> Cinema Box office </h3>
+        <article class="manager-form">
+            <form>
+            <label name="seating"> Personas que van a entrar </label>
+            <input type="number" name="seating" min="0" step="1" value="0">
+            <label name="type-theater"> a la </label>
+            <select name="type-theater">
+                <option value="central">Sala central</option>
+                <option value="secundary">Sala secundaría</option>
+            </select>
+            <button id="main-button">Registrar entrada</button>
+            </form>
+        </article>
+        <article class="cards">
+            <section class="card">
+                <h5>Sala Central</h5>
+                <p><span class="dis" id="central-dis">500</span> asientos disponibles</p>
+                <p><span class="ocp" id="central-ocp">0</span> asientos ocupados</p>
+                <p>
+                    Precio por asiento: 8,00 Dólares
+                </p>
+                <p>
+                    Total (local):
+                    <span class="dis" id="central-total">0</span> Dólares
+                </p>
+            </section>
+
+            <section class="card">
+                <h5>Sala Secundaría</h5>
+                <p><span class="dis" id="secundary-dis">80</span> asientos disponibles</p>
+                <p><span class="ocp" id="secundary-ocp">0</span> asientos ocupados</p>
+                <p>
+                    Precio por asiento: 6,00 Dólares
+                </p>
+                <p>
+                    Total (local):
+                    <span class="dis" id="secundary-total">0</span> Dólares
+                </p>
+            </section>
+
+        </article>
+        <article class="total">
+            <p>
+                Total (global):
+                <span class="dis" id="global-total">0</span> Dólares
+            </p>
+        </article>
+    </main>
+</body>
+</html>
